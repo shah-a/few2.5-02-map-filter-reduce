@@ -1,6 +1,6 @@
 // Try these map filter and reduce practice problems
 
-const names = ['anatoly', 'bobby', 'carlsen']
+const names = ['anatoly', 'bobby', 'carlsen', 'gary', 'fabiano']
 const primes = [1,2,3,5,7,11,13]
 const users = [
 	{
@@ -15,13 +15,23 @@ const users = [
 		name: 'carlsen',
 		rating: 2882
 	},
+	{
+		name: 'gary',
+		rating: 2851
+	},
+	{
+		name: 'fabiano',
+		rating: 2844
+	}
 ]
 
 // Solve the problems below using map, filter, and reduce. 
 // Be sure to log the results to the console as you solve 
 // each problem to check your results. 
 
-// Map 
+// --------------------------------------------------------------
+
+// Map problems
 
 // Create an array of uppercase names
 const upperNames = names.map(name => name.toUpperCase())
@@ -36,8 +46,18 @@ console.log(upperNames)
 
 
 // TODO: Map the users array into an array of name strings: 
-// [{ name: "" }, {}, {}] -> ['anatoly', 'bobby', 'carlsen']
+// [{ name: "anatoly", ... }, {}, {}] -> ['anatoly', 'bobby', 'carlsen']
 
+
+// TODO: Map the array of users to an array of ratings:
+// [{ name: "anatoly", rating: 2848 }, {}, {}] -> [2848, 2785, 2882]
+
+
+// TODO: Map the Users array into an array of string descriptions: 
+// [{ name: "anatoly", rating: 2848 }, {}, {}] -> ['name: anatoly rating: 2848', ...]
+
+
+// --------------------------------------------------------------
 
 // Filter
 
@@ -53,9 +73,10 @@ console.log(upperNames)
 
 
 // TODO: Filter the users array to a new array containing 
-// Users with a rating greater than 2800
+// Users with a rating greater than 2850
 
 
+// ---------------------------------------------------------------
 
 // Reduce
 
@@ -67,16 +88,51 @@ console.log(upperNames)
 // is the second praramter: arr.reduce(callBack, initalValue)
 // arr.reduce(() => {}, 0) <- here 0 is the intial value! 
 
+
 // TODO: Reduce the names array to a string made from the first 
 // letter of each string in the source array: 
 // ['anatoly', 'bobby', 'carlsen'] -> 'abc'
 
 
+
 // TODO: Reduce the primes array to the total sum of all 
 // numbers in the array. 
+// [1,2,3,5,7,11,13] -> 42
+
 
 
 // TODO: Reduce the users array to on object with the key 
 // as the name and value as the rating. For example: 
 // [{ name: "anatoly", rating: 2848 }, {}, {}] -> { 'anatoly': 2848, 'bobby': 2785, 'carlsen': 2882 }
+
+
+
+// ----------------------------------------------------------
+
+// Combine map filter and reduce!
+
+// You ,may have noticed that Map and Filter each return a 
+// new array. They do not modify the existing array. 
+// All arrays have these methods. This means you can chain 
+// them together like this: arr.map().filter(), or like
+// this: arr.filter().map(), or arr.map().filter().reduce()
+// Or any other combination you can think of. 
+
+// TODO: filter the primes array to numbers less than 10. Then 
+// reduce to get the sum. 
+// primes.filter().reduce() -> 18
+
+
+// TODO: filter the users array to get all of the players 
+// with ratings above 2850 and then map these objects to 
+// name and rating strings: 
+// users.filter().map() -> ['anatoly rating: 2848', ...]
+
+
+// TODO: Sometimes you'll run into data that is missing. 
+// often this will appear as undefined, or null. The 
+// array below has some undefined values. Filter these 
+// then get the sum. 
+
+const data = [23, 44, undefined, 12, undefined, 59, 83, 13, 42, 71, undefined]
 
