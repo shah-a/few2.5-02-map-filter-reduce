@@ -1,28 +1,28 @@
 // Try these map filter and reduce practice problems
 
 const names = ['anatoly', 'bobby', 'carlsen', 'gary', 'fabiano']
-const primes = [1,2,3,5,7,11,13]
+const primes = [1, 2, 3, 5, 7, 11, 13]
 const users = [
-	{
-		name: 'anatoly',
-		rating: 2848
-	}, 
-	{
-		name: 'bobby',
-		rating: 2785
-	},
-	{
-		name: 'carlsen',
-		rating: 2882
-	},
-	{
-		name: 'gary',
-		rating: 2851
-	},
-	{
-		name: 'fabiano',
-		rating: 2844
-	}
+  {
+    name: 'anatoly',
+    rating: 2848
+  },
+  {
+    name: 'bobby',
+    rating: 2785
+  },
+  {
+    name: 'carlsen',
+    rating: 2882
+  },
+  {
+    name: 'gary',
+    rating: 2851
+  },
+  {
+    name: 'fabiano',
+    rating: 2844
+  }
 ]
 
 // Solve the problems below using map, filter, and reduce. 
